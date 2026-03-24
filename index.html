@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>ALU RESET</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PROGRESS BAR -->
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<!-- WELCOME -->
+<section id="welcome" class="screen active">
+
+<img src="images/ALU LOGO.png" class="logo">
+
+<h1>ALU RESET</h1>
+
+<p class="tagline">
+A calm digital space for ALU students
+</p>
+
+<p>
+Pause. Breathe. Reflect.
+Nothing written here is saved.
+</p>
+
+<button onclick="nextScreen('offload',1)">Start Reset</button>
+
+</section>
+
+<!-- OFFLOAD -->
+<section id="offload" class="screen">
+
+<h2>What's on your mind?</h2>
+
+<textarea id="offloadInput"
+placeholder="Write what is stressing you..."></textarea>
+
+<p id="offloadWarning" class="warning"></p>
+
+<button onclick="validateOffload()">Continue</button>
+
+</section>
+
+<!-- BREATHING -->
+<section id="breathing" class="screen">
+
+<h2>Breathing Exercise</h2>
+
+<div class="circle"></div>
+
+<p id="breathText">Breathe slowly</p>
+
+<p id="timer">10</p>
+
+<button onclick="nextScreen('reflection',3)">Continue</button>
+
+</section>
+
+<!-- REFLECTION -->
+<section id="reflection" class="screen">
+
+<h2>Reflection</h2>
+
+<p>
+What might be causing this feeling?<br>
+Is there something small you could do today?
+</p>
+
+<textarea id="reflectionInput"
+placeholder="Write your thoughts..."></textarea>
+
+<p id="reflectionWarning" class="warning"></p>
+
+<button onclick="validateReflection()">Continue</button>
+
+</section>
+
+<!-- EMOTION SCALE -->
+<section id="emotion" class="screen">
+
+<h2>How do you feel now?</h2>
+
+<p>Move the slider to show how you feel.</p>
+
+<input type="range" min="1" max="10" value="5" id="emotionSlider">
+
+<p id="emotionValue">5 / 10</p>
+
+<button onclick="nextScreen('decision',5)">Continue</button>
+
+</section>
+
+<!-- DECISION -->
+<section id="decision" class="screen">
+
+<h2>What would you like to do next?</h2>
+
+<button onclick="nextScreen('end',6)">
+I feel a bit lighter
+</button>
+
+<button onclick="nextScreen('support',6)">
+I may need more support
+</button>
+
+</section>
+
+<!-- END -->
+<section id="end" class="screen">
+
+<h2>Take care of yourself</h2>
+
+<p>
+Small pauses can make a big difference.
+</p>
+
+<button onclick="restartReset()">
+Restart
+</button>
+
+</section>
+
+<!-- SUPPORT -->
+<section id="support" class="screen">
+
+<h2>You are not alone</h2>
+
+<p>
+If you need someone to talk to, ALU support is available.
+</p>
+
+<a class="supportBtn"
+href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Tqp2FsGQkcbnxUwrC1STybyX6m9Jpyl7d8e5xU8e81bv1bnpOMdd6h9Q7P4UmaHWW-8UiIfSO"
+target="_blank">
+
+Book a Session with Alphonse
+
+</a>
+
+<button onclick="restartReset()">
+Restart
+</button>
+
+</section>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
